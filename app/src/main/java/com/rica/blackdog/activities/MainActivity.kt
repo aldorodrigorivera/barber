@@ -6,27 +6,23 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import com.rica.blackdog.R
+import com.rica.blackdog.utils.AbstractClass
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AbstractClass() {
 
-    val TIEMPO = 3000                           /*SPLASH*/
+    val TIEMPO = 3000
     private val mHandler = Handler()
-    var run: Runnable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // OCULTA TOOLBAR POR DEFAULT
-        supportActionBar!!.hide()
-        // OCULTA LA BARRA  DE ESTATUS
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        // This function will change view
+        init()
         mHandler.postDelayed({loadSplash()},TIEMPO.toLong())
     }
 
     fun loadSplash(){
-        val intent = Intent(this, Login::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }

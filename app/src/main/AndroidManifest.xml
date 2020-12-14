@@ -5,12 +5,14 @@
     <application
         android:name=".app.App"
         android:allowBackup="true"
-        android:icon="@drawable/hairstyle"
+        android:icon="@drawable/barbershop"
         android:label="Barber"
-        android:roundIcon="@drawable/hairstyle"
+        android:roundIcon="@drawable/barbershop"
         android:supportsRtl="true"
         android:theme="@style/Theme.BlackDog">
-        <activity android:name=".activities.Login"></activity>
+        <activity android:name=".activities.PointsOfSaleActivity"></activity>
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

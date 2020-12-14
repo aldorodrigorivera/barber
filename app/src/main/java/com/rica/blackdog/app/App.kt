@@ -1,6 +1,8 @@
 package com.rica.blackdog.app
 
 import android.app.Application
+import com.parse.Parse
+import com.parse.ParseInstallation
 
 class App: Application() {
 
@@ -17,12 +19,13 @@ class App: Application() {
         //        ParseObject.registerSubclass(Ticket::class.java)
         //        ParseObject.registerSubclass(Message::class.java)
 
-        /*Parse.initialize(Parse.Configuration.Builder(applicationContext)
-            .applicationId("BrounieApp")
-            .clientKey("C4suYZKkyRMYPGR7fEae")
-            .server("https://brewsintown.brounieapps.com/parse/")
+        Parse.initialize(
+            Parse.Configuration.Builder(applicationContext)
+            .applicationId("KHsXYICKjMkN6oVRUgwuj5ZTLC586l8RpOg2NbmK")
+            .clientKey("EZgrUsP0Ejx5DuphV5nhCEIsehPj3ZtidOOC3EX5")
+            .server("https://parseapi.back4app.com/")
             .build()
         )
-        ParseInstallation.getCurrentInstallation().saveInBackground()*/
+        ParseInstallation.getCurrentInstallation().saveInBackground()
     }
 }
