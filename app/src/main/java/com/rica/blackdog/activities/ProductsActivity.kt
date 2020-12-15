@@ -1,28 +1,31 @@
 package com.rica.blackdog.activities
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import com.parse.ParseObject
 import com.rica.blackdog.R
+import com.rica.blackdog.adapters.ProductsAdapter
 import com.rica.blackdog.adapters.ServiceAdapter
 import com.rica.blackdog.interfaces.GenericInterface
-import com.rica.blackdog.interfaces.HomeInterface
-import com.rica.blackdog.presenters.HomePresenter
+import com.rica.blackdog.interfaces.ProductsInterface
+import com.rica.blackdog.presenters.ProductsPresenter
 import com.rica.blackdog.utils.AbstractClass
 import com.rica.blackdog.utils.Utils
 import kotlinx.android.synthetic.main.activity_home.*
-import java.util.ArrayList
+import kotlinx.android.synthetic.main.activity_products.*
+import kotlinx.android.synthetic.main.activity_products.list
+import kotlinx.android.synthetic.main.activity_products.loader
 
-class HomeActivity : AbstractClass(), GenericInterface, HomeInterface {
+class ProductsActivity : AbstractClass(),GenericInterface, ProductsInterface {
 
-    var mPresenter: HomePresenter?=null
-    var servicesObjects: ArrayList<ParseObject> ?=null
-
+    var mPresenter: ProductsPresenter ?=null
+    var productsObject : ArrayList<ParseObject> ?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_products)
         init()
         buttons()
         queries()
@@ -30,27 +33,21 @@ class HomeActivity : AbstractClass(), GenericInterface, HomeInterface {
 
     override fun init() {
         super.init()
-        this.servicesObjects = ArrayList()
-        this.mPresenter = HomePresenter(this,this,this)
+        this.productsObject = ArrayList()
+        this.mPresenter = ProductsPresenter(this,this,this)
     }
 
     override fun buttons() {
         super.buttons()
-        btnMenu.setOnClickListener {
-            Utils.toast(this, "Menu")
-        }
-        btnPointOfSale.setOnClickListener {
-            Utils.goTo(this,ProductsActivity::class.java)
-        }
     }
 
     override fun queries() {
         super.queries()
-        this.mPresenter!!.getAllServices()
+        this.mPresenter!!.getAllProducts()
     }
 
     override fun onError(msn: String) {
-        Utils.toast(this,msn)
+        Utils.toast(this, msn)
     }
 
     override fun onLoading() {
@@ -61,16 +58,12 @@ class HomeActivity : AbstractClass(), GenericInterface, HomeInterface {
         loader.visibility = View.GONE
     }
 
-    override fun onSuccess(services: ArrayList<ParseObject>) {
-        this.servicesObjects = services
-        val mAdapter = ServiceAdapter(this,services,this)
-        val mLayoutManager = GridLayoutManager(this,1)
+    override fun onSuccess(products: ArrayList<ParseObject>) {
+        this.productsObject = products
+        val mAdapter = ProductsAdapter(this,products,this)
+        val mLayoutManager = GridLayoutManager(this,2)
         list!!.setLayoutManager(mLayoutManager)
         list!!.setItemAnimator(DefaultItemAnimator())
         list!!.setAdapter(mAdapter)
-    }
-
-    override fun onClick(service: ParseObject) {
-        Utils.toast(this, service.getString("name"))
     }
 }

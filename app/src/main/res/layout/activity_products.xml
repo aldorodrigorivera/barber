@@ -4,28 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.HomeActivity">
-
-    <ImageView
-        android:id="@+id/btnMenu"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
+    tools:context=".activities.ProductsActivity"
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/lbTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
-        android:text="SERVICIOS"
-        android:textSize="40sp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:textColor="@color/black"
+        android:text="PRODUCTOS"
+        android:textColor="@color/white"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,28 +52,9 @@
         app:layout_constraintBottom_toTopOf="@+id/btnSucursales"
         app:layout_constraintTop_toBottomOf="@+id/lbTitle"
         tools:layout_editor_absoluteX="108dp"
+
         tools:listitem="@layout/item_service_list" />
 
-    <LinearLayout
-        android:id="@+id/btnSucursales"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/btnPointOfSale"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-            android:textColor="@color/white"
-            android:text="PRODUCTOS"/>
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
