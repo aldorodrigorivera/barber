@@ -39,6 +39,9 @@ class ProductsActivity : AbstractClass(),GenericInterface, ProductsInterface {
 
     override fun buttons() {
         super.buttons()
+        btnClose.setOnClickListener {
+            finish()
+        }
     }
 
     override fun queries() {

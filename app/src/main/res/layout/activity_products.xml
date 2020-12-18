@@ -55,6 +55,15 @@
 
         tools:listitem="@layout/item_service_list" />
 
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/close_blanco" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

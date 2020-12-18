@@ -37,7 +37,7 @@ class HomeActivity : AbstractClass(), GenericInterface, HomeInterface {
     override fun buttons() {
         super.buttons()
         btnMenu.setOnClickListener {
-            Utils.toast(this, "Menu")
+            Utils.goTo(this,MenuActivity::class.java)
         }
         btnPointOfSale.setOnClickListener {
             Utils.goTo(this,ProductsActivity::class.java)
