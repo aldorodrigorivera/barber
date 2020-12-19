@@ -45,7 +45,7 @@ class LoginActivity : AbstractClass(), GenericInterface,LoginInterface {
         }
         btnSingUp.setOnClickListener {
             if (!isBlocked){
-                Utils.goTo(this,LoginActivity::class.java)
+                Utils.goTo(this,SingUpActivity::class.java)
             }
 
         }
