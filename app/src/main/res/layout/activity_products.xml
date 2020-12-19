@@ -49,11 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSucursales"
         app:layout_constraintTop_toBottomOf="@+id/lbTitle"
         tools:layout_editor_absoluteX="108dp"
-
-        tools:listitem="@layout/item_service_list" />
+        tools:listitem="@layout/item_product_list" />
 
     <ImageView
         android:id="@+id/btnClose"
