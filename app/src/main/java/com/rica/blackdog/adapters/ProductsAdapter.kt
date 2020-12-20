@@ -1,18 +1,15 @@
 package com.rica.blackdog.adapters
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.parse.ParseObject
 import com.rica.blackdog.R
-import com.rica.blackdog.interfaces.HomeInterface
 import com.rica.blackdog.interfaces.ProductsInterface
 
 class ProductsAdapter
@@ -68,7 +65,7 @@ class ProductsAdapter
 
         init {
             name = itemView.findViewById(R.id.name)
-            price = itemView.findViewById(R.id.price)
+            price = itemView.findViewById(R.id.phone)
             img = itemView.findViewById(R.id.img)
         }
     }

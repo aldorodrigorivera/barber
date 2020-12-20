@@ -59,6 +59,7 @@
             android:fontFamily="sans-serif-black"
             android:text="PERFIL"
             android:layout_gravity="center"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
@@ -83,6 +84,8 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:text="MÉTODOS DE PAGO"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
@@ -105,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:text="SOPORTE"
@@ -133,6 +137,8 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:text="HISTORIAL"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
@@ -163,6 +169,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:fontFamily="sans-serif-black"
             android:text="SUCURSALES DISPONIBLES"
             android:textColor="@color/white"
@@ -187,6 +195,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:text="COMENTARIOS"
@@ -215,6 +224,8 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:text="CITAS ACTIVAS"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
@@ -238,6 +249,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
             android:text="CERRAR SESIÓN"

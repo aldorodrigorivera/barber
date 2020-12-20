@@ -27,7 +27,7 @@ class MenuActivity : AbstractClass() {
             Utils.goTo(this,ProfileActivity::class.java)
         }
         btnPointOfSale.setOnClickListener {
-            Utils.toast(this,"Sucursales")
+            Utils.goTo(this,PointsOfSaleActivity::class.java)
         }
         btnPaymentMethods.setOnClickListener {
             Utils.toast(this,"Métodos de pago")
