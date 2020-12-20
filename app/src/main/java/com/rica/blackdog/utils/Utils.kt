@@ -1,13 +1,13 @@
 package com.rica.blackdog.utils
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.IntentSender
+import android.net.Uri
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import com.parse.ParseUser
 import com.rica.blackdog.activities.LoginActivity
+
 
 object Utils {
 
@@ -27,6 +27,12 @@ object Utils {
     fun logOut(context: Context){
         ParseUser.logOut()
         this.goTo(context, LoginActivity::class.java)
+    }
+
+    fun callPhone(context: Context, phone: String) {
+        val dialIntent = Intent(Intent.ACTION_DIAL)
+        dialIntent.data = Uri.parse("tel:" + phone)
+        context.startActivity(dialIntent)
     }
 
 }

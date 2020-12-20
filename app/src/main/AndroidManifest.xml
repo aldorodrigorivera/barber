@@ -10,7 +10,8 @@
         android:roundIcon="@drawable/barbershop"
         android:supportsRtl="true"
         android:theme="@style/Theme.BlackDog">
-        <activity android:name=".activities.SingUpActivity"></activity>
+        <activity android:name=".activities.ProfileActivity"></activity>
+        <activity android:name=".activities.SingUpActivity" />
         <activity android:name=".activities.MenuActivity" />
         <activity android:name=".activities.ProductsActivity" />
         <activity android:name=".activities.PointsOfSaleActivity" />

@@ -44,7 +44,7 @@ class SinUpPresenter (
             return
         }
 
-        singUp(email,password,phone)
+        singUp(name, email,password,phone)
     }
 
     /**
@@ -53,13 +53,14 @@ class SinUpPresenter (
      * @param password
      * @param phone
      */
-    private fun singUp(email: String, password: String, phone:String){
+    private fun singUp(name:String, email: String, password: String, phone:String){
         this.mGeneric.onLoading()
         val user = ParseUser()
         user.username = email
         user.setPassword(password)
         user.email = email
         user.put("phone",phone)
+        user.put("name",name)
         user.signUpInBackground { e ->
             if (e == null) {
                 this.mGeneric.onLoadingDone()

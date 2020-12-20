@@ -214,7 +214,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-black"
-            android:text="RESERVACIONES ACTIVAS"
+            android:text="CITAS ACTIVAS"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
