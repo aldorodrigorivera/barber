@@ -33,7 +33,7 @@ class MenuActivity : AbstractClass() {
             Utils.toast(this,"Métodos de pago")
         }
         btnComments.setOnClickListener {
-            Utils.toast(this,"Comentarios")
+            Utils.goTo(this, CommentsActivity::class.java)
         }
 
         btnCustomerService.setOnClickListener {
